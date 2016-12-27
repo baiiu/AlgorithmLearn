@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algorithmforthedition/AlgorithmForthEdition.iml" filepath="$PROJECT_DIR$/.idea/modules/algorithmforthedition/AlgorithmForthEdition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlgorithmForthEdition/AlgorithmForthEdition.iml" filepath="$PROJECT_DIR$/.idea/modules/AlgorithmForthEdition/AlgorithmForthEdition.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlgorithmLearn.iml" filepath="$PROJECT_DIR$/.idea/modules/AlgorithmLearn.iml" />
     </modules>
   </component>
