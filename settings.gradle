@@ -1,1 +1,1 @@
-include ':AlgorithmForthEdition'
+include ':AlgorithmForthEdition', ':test', ':sort'

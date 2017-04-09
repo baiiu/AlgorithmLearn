@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlgorithmForthEdition/AlgorithmForthEdition.iml" filepath="$PROJECT_DIR$/.idea/modules/AlgorithmForthEdition/AlgorithmForthEdition.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlgorithmLearn.iml" filepath="$PROJECT_DIR$/.idea/modules/AlgorithmLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlgorithmModule.iml" filepath="$PROJECT_DIR$/.idea/modules/AlgorithmModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sort/sort.iml" filepath="$PROJECT_DIR$/.idea/modules/sort/sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test/test.iml" filepath="$PROJECT_DIR$/.idea/modules/test/test.iml" />
     </modules>
   </component>
 </project>
