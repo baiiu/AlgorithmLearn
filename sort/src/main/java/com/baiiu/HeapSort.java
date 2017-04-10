@@ -6,7 +6,7 @@ package com.baiiu;
  * description:
  * 堆排序：
  */
-public class HeapSort {
+class HeapSort {
 
     static void heapSort(int[] array) {
         if (array == null || array.length == 1) return;
@@ -17,18 +17,21 @@ public class HeapSort {
             1. 从末端子节点开始作调整，使得子节点永远小于父节点。
             2. 构造大顶堆
         */
-        for (i = (size - 2) >> 2; i >= 0; --i) { // i = size/2即堆的末端子节点，从此开始调整堆，使得子节点永远小于父节点。
+
+        // i = (lastLeftIndex - 1) / 2 = (size -2) /2即堆的末端子节点，
+        // 从末子节点往上开始调整堆，使得子节点永远小于父节点。
+        for (i = (size - 2) >> 2; i >= 0; --i) {
             heapAdjust(array, i, size - 1);
         }
 
         /*
             3. 交换堆顶元素和末尾元素，重新调整剩下元素为大顶堆
          */
-        //for (i = size - 1; i > 0; --i) {
-        //    CommonUtil.swap(array, 0, i);//将堆顶元素和末尾元素交换
-        //
-        //    heapAdjust(array, 0, i - 1);//将剩下的元素调整为大顶堆
-        //}
+        for (i = size - 1; i > 0; --i) {
+            CommonUtil.swap(array, 0, i);//将堆顶元素和末尾元素交换
+
+            heapAdjust(array, 0, i - 1);//将剩下的元素调整为大顶堆
+        }
 
     }
 
