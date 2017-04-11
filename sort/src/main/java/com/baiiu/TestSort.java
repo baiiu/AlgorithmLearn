@@ -26,7 +26,7 @@ public class TestSort {
         //HeapSort.heapSort(array);
 
         //MergeSort.mergeSort(array);
-        MergeSort.merge_sort(array);
+        MergeSortWhile.mergeSort(array);
 
         CommonUtil.printArray(array);
 
