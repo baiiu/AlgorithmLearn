@@ -1,2 +1,2 @@
-include ':AlgorithmForthEdition'
+include ':AlgorithmForthEdition', ':questions'
 include ':sort'
