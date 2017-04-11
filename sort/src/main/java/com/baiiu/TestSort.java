@@ -8,7 +8,7 @@ package com.baiiu;
 public class TestSort {
 
     public static void main(String[] args) {
-        int[] array = new int[] { 5, 0, 10, 0, 2, 6, 9, 7, 8, -1 };
+        int[] array = new int[] { 5, 0, 10, 0, 2, 6, 9, 7, 8, -1, 3 };
 
         //BubbleSort.simpleSwapSort(array);
         //BubbleSort.bubbleSort(array);
@@ -23,7 +23,10 @@ public class TestSort {
 
         //ShellSort.shellSort(array);
 
-        HeapSort.heapSort(array);
+        //HeapSort.heapSort(array);
+
+        //MergeSort.mergeSort(array);
+        MergeSort.merge_sort(array);
 
         CommonUtil.printArray(array);
 
