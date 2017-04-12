@@ -30,7 +30,8 @@ public class TestSort {
 
         //QuickSort.quickSort(array);
         //QuickSortWithInsertSort.quickSortWithInsertSort(array);
-        QuickSortWhile.quickSort(array);
+
+        BucketSort.bucketSort(array, 5);
 
         CommonUtil.printArray(array);
         CommonUtil.isSorted(array);
