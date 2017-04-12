@@ -28,7 +28,9 @@ public class TestSort {
         //MergeSort.mergeSort(array);
         //MergeSortWhile.mergeSort(array);
 
-        QuickSort.quickSort(array);
+        //QuickSort.quickSort(array);
+
+        QuickSortWithInsertSort.quickSortWithInsertSort(array);
 
         CommonUtil.printArray(array);
         CommonUtil.isSorted(array);
