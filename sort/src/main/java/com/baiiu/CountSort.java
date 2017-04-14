@@ -3,7 +3,7 @@ package com.baiiu;
 /**
  * author: baiiu
  * date: on 17/4/13 10:44
- * description:
+ * description: 计数排序
  */
 @SuppressWarnings("ForLoopReplaceableByForEach")
 class CountSort {
@@ -27,7 +27,6 @@ class CountSort {
         for (int i = 0; i < a.length; ++i) {
             c[a[i] - min] += 1;
         }
-        CommonUtil.printArray(c);
 
         /*
             统计出小于等于a[i]的个数有几个
@@ -35,21 +34,19 @@ class CountSort {
         for (int i = 1; i < c.length; ++i) {
             c[i] = c[i] + c[i - 1];
         }
-        CommonUtil.printArray(c);
 
         /*
-            例如有10个年龄不同的人，统计出有8个人的年龄比A小，那A的年龄就排在第9位，用这个方法可以得到其他每个人的位置，也就排好了序。
+            例如有10个年龄不同的人，统计出有8个人的年龄比A小，那A的年龄就排在第9位，
+            用这个方法可以得到其他每个人的位置，也就排好了序。
          */
-        CommonUtil.printArray(c);
         for (int i = a.length - 1; i >= 0; --i) {
             // --c[a[i] - min],小于等于它的有这么多个，就排在这个位置上，数组下标要减1
-
-            System.out.println(i + "before: " + c[a[i] - min] + ", " + a[i] + ", " + min);
+            // 此处c数组在不断变化，取走一个，小于等于它的便少了一个
             int index = --c[a[i] - min];
-            System.out.println(i + "after: " + index + ", " + index + ", " + a[i]);
 
             b[index] = a[i];//按存取的方式取出c的元素
         }
+
 
         return b;
     }
