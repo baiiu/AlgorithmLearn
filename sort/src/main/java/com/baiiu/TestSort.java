@@ -35,7 +35,7 @@ public class TestSort {
 
         //array = CountSort.countSort(array);
 
-        RadixSort.radixSort2(array);
+        RadixSort.radixSort(array);
 
         CommonUtil.printArray(array);
         CommonUtil.isSorted(array);
