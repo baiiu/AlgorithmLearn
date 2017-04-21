@@ -1,10 +1,20 @@
 #include <stdio.h>
 
-struct MyPoint{
+// struct MyPoint{
+//   float x;
+//   float y;
+// };
+// typedef struct MyPoint Point;
+
+// 定义类型时起别名
+typedef struct{
   float x;
   float y;
-};
-typedef struct MyPoint Point;
+}Point;
+
+typedef Point *SP;
+
+
 
 
 int main()
@@ -17,9 +27,14 @@ int main()
   printf("%f\n", p.x);
   printf("%f\n", p.y);
 
+  printf("Hello, World! \n");
+
+  SP pp = &p;
+  printf("%f\n", pp->x);
+  printf("%f\n", pp->y);
+
 
    /* 我的第一个 C 程序 */
-   printf("Hello, World! \n");
 
    return 0;
 }
