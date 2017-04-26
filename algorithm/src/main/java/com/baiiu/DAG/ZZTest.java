@@ -41,8 +41,11 @@ public class ZZTest {
         graph.addEdge(eleven, nine);
         graph.addEdge(eleven, ten);
 
+        //graph.addEdge(two, five);//添加一个环
+
 
         /*
+        including:
             5, 7, 3, 11, 8, 2, 9, 10 (visual left-to-right, top-to-bottom)
             3, 5, 7, 8, 11, 2, 9, 10 (smallest-numbered available vertex first)
             5, 7, 3, 8, 11, 10, 9, 2 (fewest edges first)
@@ -52,6 +55,7 @@ public class ZZTest {
          */
 
         System.out.println(new KahnTopologicalSort(graph).kahnSort());
+        System.out.println(new DFSTopologicalSort(graph).DFSSort());
 
     }
 

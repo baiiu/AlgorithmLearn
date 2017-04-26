@@ -53,15 +53,13 @@ class KahnTopologicalSort {
             }
         }
 
-        System.out.println(mIndegrees);
-        System.out.println(mSetOfZeroIndegree);
+        //System.out.println(mIndegrees);
+        //System.out.println(mSetOfZeroIndegree);
     }
 
     List<Vertex> kahnSort() {
 
         while (!mSetOfZeroIndegree.isEmpty()) {
-            System.out.println(mIndegrees);
-
             Vertex poll = mSetOfZeroIndegree.pop();
             mSortResult.add(poll);
 
@@ -73,12 +71,17 @@ class KahnTopologicalSort {
             for (Vertex vertex : outgoingNodes) {
                 int degree = mIndegrees.get(vertex);
                 --degree;
+                mIndegrees.put(vertex, degree);
+
                 if (0 == degree) {
                     mSetOfZeroIndegree.push(vertex);
                 }
-                mIndegrees.put(vertex, degree);
             }
 
+        }
+
+        if(mSortResult.size() != mGraph.nodesCount()){
+            throw new RuntimeException("This graph contains cyclic dependencies");
         }
 
 
