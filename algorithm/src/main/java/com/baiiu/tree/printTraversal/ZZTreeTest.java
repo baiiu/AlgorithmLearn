@@ -29,15 +29,31 @@ public class ZZTreeTest {
         CNode.lChild = FNode;
         CNode.rChild = GNode;
 
+        System.out.println("前序遍历：");
         Preorder.preOrderRe(tree);
         System.out.println();
         Preorder.preOrder(tree);
         System.out.println();
         Preorder.preOrder2(tree);
-        System.out.print("\n-------------------------------\n");
+        System.out.print("\n-------------------------------\n\n");
 
 
+        System.out.println("中序遍历：");
         Inorder.inOrderRe(tree);
+        System.out.println();
+        Inorder.inOrder(tree);
+        System.out.print("\n-------------------------------\n\n");
+
+
+        System.out.println("后序遍历：");
+        PostOrder.postOrderRe(tree);
+        System.out.println();
+        PostOrder.postOrder(tree);
+        System.out.println();
+        PostOrder.postOrder2(tree);
+        System.out.print("\n-------------------------------\n\n");
+
+        //层序遍历
 
     }
 
