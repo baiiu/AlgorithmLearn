@@ -54,7 +54,8 @@ public class ZZTreeTest {
         System.out.print("\n-------------------------------\n\n");
 
         //层序遍历
-
+        System.out.println("层序遍历：");
+        LevelOrder.levelOrder(tree);
     }
 
 }
