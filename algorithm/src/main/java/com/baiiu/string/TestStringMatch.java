@@ -5,7 +5,7 @@ package com.baiiu.string;
  * time: 17/4/15 15 10:59
  * description:
  */
-public class Test {
+public class TestStringMatch {
 
     public static void main(String[] args) {
         String s = "goodgoogle"; //10

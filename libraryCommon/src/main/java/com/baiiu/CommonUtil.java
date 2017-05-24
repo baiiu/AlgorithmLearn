@@ -7,12 +7,13 @@ import java.util.Arrays;
  * time: 17/4/9 09 10:05
  * description:
  */
+@SuppressWarnings("WeakerAccess")
 public class CommonUtil {
 
     /**
      * 交换数组中两个元素
      */
-    static void swap(int[] array, int i, int j) {
+    public static void swap(int[] array, int i, int j) {
         // @formatter:off
         if (array == null
                 || i > array.length - 1 || j > array.length - 1
@@ -27,7 +28,7 @@ public class CommonUtil {
         array[j] = temp;
     }
 
-    static void printArray(int[] array) {
+    public static void printArray(int[] array) {
         if (array == null) {
             return;
         }
@@ -38,7 +39,7 @@ public class CommonUtil {
     /**
      * 是否从小到大排序
      */
-    static void isSorted(int[] array) {
+    public static void isSorted(int[] array) {
         for (int i = 1, length = array.length; i < length; i++) {
             if (array[i] < array[i - 1]) {
                 throw new IllegalStateException("array is not sorted");
@@ -49,7 +50,7 @@ public class CommonUtil {
 
     // test方法
     public static void main(String[] args) {
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int[] array = new int[]{1, 2, 3, 4, 5};
         printArray(array);
 
         swap(array, 0, 2);

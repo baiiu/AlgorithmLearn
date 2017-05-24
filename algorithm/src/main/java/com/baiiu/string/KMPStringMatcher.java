@@ -6,7 +6,7 @@ import java.util.Arrays;
  * auther: baiiu
  * time: 17/4/15 15 13:28
  * description:
- *
+ * <p>
  * [从头到尾彻底理解KMP](http://blog.csdn.net/v_july_v/article/details/7041827#t14)
  */
 @SuppressWarnings("ALL")

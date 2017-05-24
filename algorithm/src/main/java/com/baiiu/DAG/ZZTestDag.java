@@ -5,7 +5,7 @@ package com.baiiu.DAG;
  * date: on 17/4/26 15:14
  * description:
  */
-public class ZZTest {
+public class ZZTestDag {
 
     public static void main(String[] args) {
 

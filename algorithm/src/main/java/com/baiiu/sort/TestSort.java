@@ -1,11 +1,13 @@
 package com.baiiu.sort;
 
+import com.baiiu.CommonUtil;
+
 /**
  * auther: baiiu
  * time: 17/4/9 09 10:59
  * description:
  */
-class Test {
+class TestSort {
 
     public static void main(String[] args) {
         int[] array = new int[] { 5, 0, 10, 0, 2, 6, 9, 7, 8, -1, 3 };//11

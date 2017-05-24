@@ -11,7 +11,7 @@ import com.baiiu.tree.BiNode;
  * --B------C
  * D---E--F---G
  */
-public class ZZTreeTest {
+public class ZZTestTree {
 
     public static void main(String[] args) {
         BiNode tree = new BiNode("A");
