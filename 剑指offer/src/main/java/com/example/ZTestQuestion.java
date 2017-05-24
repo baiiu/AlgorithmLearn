@@ -8,7 +8,9 @@ package com.example;
 public class ZTestQuestion {
 
     public static void main(String[] args) {
-        Question03.test();
+//        Question03.test();
+        Question04.test();
+
 
     }
 
