@@ -48,8 +48,21 @@ class Question04 {
             }
         }
 
-        int newLength = originalLength + spaceCount * 2;
+        int j = originalLength + spaceCount * 2 - 1;
 
+        for (int i = originalLength - 1; i >= 0; --i) {
+            if (' ' == chars[i]) {
+                chars[j] = '0';
+                chars[--j] = '2';
+                chars[--j] = '%';
+            } else {
+                chars[j] = chars[i];
+            }
+
+            --j;
+        }
+
+        System.out.println(chars);
 
     }
 
@@ -69,7 +82,7 @@ class Question04 {
         char[] newString = new char[chars.length + spaceCount * 2];
 
         for (int i = 0, j = 0; i < chars.length; i++) {
-            if (Character.isWhitespace(chars[i])) {
+            if (' ' == chars[i]) {
                 newString[j] = '%';
                 newString[++j] = '2';
                 newString[++j] = '0';
@@ -83,6 +96,5 @@ class Question04 {
         System.out.println(newString);
 
     }
-
 
 }
