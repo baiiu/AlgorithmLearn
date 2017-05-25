@@ -5,7 +5,7 @@ package com.example;
  * date: on 17/5/24 20:42
  * description:
  */
-class Question04 {
+class Question04_ReplaceBlank {
 
     /**
      * 把字符串中每个空格换成%20
@@ -63,7 +63,6 @@ class Question04 {
         }
 
         System.out.println(chars);
-
     }
 
     // 使用多余空间，时间复杂度O(n)

@@ -1,6 +1,6 @@
 package com.example;
 
-class Question03 {
+class Question03_FindInPartiallySortedMatrix {
 
     /**
      * 一个二维数组中，每一行都从左到右递增，每一列也从上到下递增；
