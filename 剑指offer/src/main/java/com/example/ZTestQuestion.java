@@ -10,7 +10,8 @@ public class ZTestQuestion {
     public static void main(String[] args) {
 //        Question03_FindInPartiallySortedMatrix.test();
 //        Question04_ReplaceBlank.test();
-        Question04_ConcatArray.test();
+//        Question04_ConcatArray.test();
+        Question05_PrintListReversingly.test();
 
     }
 
