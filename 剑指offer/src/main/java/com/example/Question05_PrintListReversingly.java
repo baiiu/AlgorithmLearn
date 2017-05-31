@@ -9,6 +9,9 @@ import java.util.Stack;
  */
 class Question05_PrintListReversingly {
 
+    /**
+     * 从尾到前打印链表
+     */
     static void test() {
         Node nodeA = new Node("A");
         Node nodeB = new Node("B");

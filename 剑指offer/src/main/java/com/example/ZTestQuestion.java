@@ -11,17 +11,20 @@ public class ZTestQuestion {
         /*
             数据结构
          */
-//        Question03_FindInPartiallySortedMatrix.test();
-//        Question04_ReplaceBlank.test();
-//        Question04_ConcatArray.test();
-//        Question05_PrintListReversingly.test();
-//        Question07_QueueWithTwoStacks.test();
-//        Question07_StackWithTwoQueues.test();
+
+        //Question03_FindInPartiallySortedMatrix.test();
+        //Question04_ReplaceBlank.test();
+        //Question04_ConcatArray.test();
+        //Question05_PrintListReversingly.test();
+        //Question06_ConstructBinaryTree.test();
+        //Question07_QueueWithTwoStacks.test();
+        //Question07_StackWithTwoQueues.test();
 
         /*
             算法与数据操作
          */
-        Question_SortAges.test();
+        //Question08_SortAges.test();
+        Question08_MinNumberInRotatedArray.test();
     }
 
 }
