@@ -36,8 +36,8 @@ public class ZTestQuestion {
                 边界测试
                 负面测试
          */
-        Question11_Power.test();
-
+//        Question11_Power.test();
+        Question12_.test();
     }
 
 }
