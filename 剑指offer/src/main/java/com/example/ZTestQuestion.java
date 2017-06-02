@@ -11,7 +11,6 @@ public class ZTestQuestion {
         /*
             数据结构
          */
-
 //        Question03_FindInPartiallySortedMatrix.test();
 //        Question04_ReplaceBlank.test();
 //        Question04_ConcatArray.test();
@@ -29,7 +28,15 @@ public class ZTestQuestion {
 //        Question08_SortAges.test();
 //        Question08_MinNumberInRotatedArray.test();
 //        Question09_Fibonacci.test();
-        Question10_.test();
+//        Question10_NumberOfOneInBinary.test();
+
+        /*
+            代码的完整性：
+                功能测试
+                边界测试
+                负面测试
+         */
+        Question11_Power.test();
 
     }
 
