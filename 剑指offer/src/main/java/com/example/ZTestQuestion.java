@@ -21,14 +21,15 @@ public class ZTestQuestion {
 //        Question07_StackWithTwoQueues.test();
 
         /*
-            算法与数据操作
+            算法与数据操作：
+                查找和排序
+                递归和循环
+                位运算
          */
 //        Question08_SortAges.test();
 //        Question08_MinNumberInRotatedArray.test();
-        Question09_Fibonacci.test();
-
-
-
+//        Question09_Fibonacci.test();
+        Question10_.test();
 
     }
 
