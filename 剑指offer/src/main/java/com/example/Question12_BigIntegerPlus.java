@@ -41,18 +41,25 @@ class Question12_BigIntegerPlus {
             aNumber = aLength - 1 - i >= 0 ? numberA[aLength - 1 - i] : 0;
             bNumber = bLength - 1 - i >= 0 ? numberB[bLength - 1 - i] : 0;
 
-            result[max - i] = aNumber + bNumber;
-        }
+            result[max - i] = result[max - i] + aNumber + bNumber;
 
-        int i = max;
-        while (i >= 0) {
-            while (result[i] >= 10) {
-                result[i] -= 10;
-                result[i - 1]++;
+            while (result[max - i] >= 10) {
+                result[max - i] -= 10;
+                ++result[max - i - 1];
             }
-
-            --i;
         }
+
+//        int i = max;
+//        while (i >= 0) {
+//            while (result[i] >= 10) {
+//                result[i] -= 10;
+//                result[i - 1]++; //第0位到不了10；进位应该也进不到20，可以改成if
+//            }
+//
+//            printNumber(result);
+//
+//            --i;
+//        }
 
         printNumber(result);
     }
