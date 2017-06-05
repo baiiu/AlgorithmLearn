@@ -38,7 +38,9 @@ public class ZTestQuestion {
          */
 //        Question11_Power.test();
 //        Question12_PrintOneToMaxDigits.test();
-        Question12_BigIntegerPlus.test();
+//        Question12_BigIntegerPlus.test();
+        Question13_.test();
+
     }
 
 }
