@@ -37,7 +37,8 @@ public class ZTestQuestion {
                 负面测试
          */
 //        Question11_Power.test();
-        Question12_.test();
+//        Question12_PrintOneToMaxDigits.test();
+        Question12_BigIntegerPlus.test();
     }
 
 }
