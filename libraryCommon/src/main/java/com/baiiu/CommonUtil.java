@@ -10,6 +10,10 @@ import java.util.Arrays;
 @SuppressWarnings("WeakerAccess")
 public class CommonUtil {
 
+    public static boolean isEmpty(int[] array) {
+        return array == null || array.length == 0 || array.length == 1;
+    }
+
     /**
      * 交换数组中两个元素
      */
