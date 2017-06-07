@@ -41,6 +41,16 @@ public class CommonUtil {
     }
 
     /**
+     * 打印链表
+     */
+    public static void printNodeList(Node node) {
+        while (node != null) {
+            System.out.print(node.data);
+            node = node.next;
+        }
+    }
+
+    /**
      * 是否从小到大排序
      */
     public static void isSorted(int[] array) {

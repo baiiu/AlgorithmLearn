@@ -1,5 +1,9 @@
 package com.example;
 
+import com.baiiu.Node;
+
+import static com.baiiu.CommonUtil.printNodeList;
+
 /**
  * author: baiiu
  * date: on 17/6/5 18:41
@@ -22,12 +26,12 @@ class Question13_DeleteNodeInList {
         nodeC.next = nodeD;
         nodeD.next = nodeE;
 
-        printList(nodeA);
+        printNodeList(nodeA);
         System.out.println();
 
         //deleteNode(nodeA, nodeA);
         deleteNode_Ingenious(nodeA, nodeE);
-        printList(nodeA);
+        printNodeList(nodeA);
     }
 
     /*
@@ -83,13 +87,5 @@ class Question13_DeleteNodeInList {
         }
     }
 
-    private static void printList(Node node) {
-
-        while (node != null) {
-            System.out.print(node.data);
-            node = node.next;
-        }
-
-    }
 
 }

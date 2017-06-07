@@ -1,18 +1,18 @@
-package com.example;
+package com.baiiu;
 
 /**
  * author: baiiu
  * date: on 17/5/26 13:08
  * description: 链表
  */
-class Node {
-    String data;
-    Node next;
+public class Node {
+    public String data;
+    public Node next;
 
-    Node() {
+    public Node() {
     }
 
-    Node(String data) {
+    public Node(String data) {
         this.data = data;
     }
 

@@ -45,7 +45,8 @@ public class ZTestQuestion {
         /*
             代码的鲁棒性Robust，健壮性
          */
-        Question15_KthNodeFromEnd.test();
+//        Question15_KthNodeFromEnd.test();
+        Question16_.test();
     }
 
 }

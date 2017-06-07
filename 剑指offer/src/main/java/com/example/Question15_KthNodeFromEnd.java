@@ -1,5 +1,7 @@
 package com.example;
 
+import com.baiiu.Node;
+
 import java.util.Stack;
 
 /**
@@ -27,43 +29,85 @@ class Question15_KthNodeFromEnd {
         nodeC.next = nodeD;
         nodeD.next = nodeE;
 
-        int k = 4;
+        int k = 1;
+//        int k = 5;
+//        int k = 7;
 
-        printReverseNumberK(nodeA, k);
         findKthToTail(nodeA, k);
+        findKthToTail_Twice(nodeA, k);
+        printReverseNumberK(nodeA, k);
     }
 
 
     /*
-        1. 第一次遍历，求出结点个数size
-        2. 第二次遍历，输出第size - k个结点，开头是第0个结点
-
-        这种解法要遍历两次。
-
         只遍历一次，用两个指针，第一个到K - 1时再开始移动第二个指针
 
+        因为endPtr和targetPtr之间的间距总是k -1
      */
     private static void findKthToTail(Node node, int k) {
-        if (node == null) return;
+        if (node == null || k <= 0) return;
 
-        int endPtr = 0, kPtr = 0;
+        int endPtr = 0, targetPtr = 0;
 
-        while (node != null) {
+        Node target = node;
+
+        while (true) {
+            node = node.next;
+
+            if (node == null) {
+                if (target == null) {
+                    System.out.println("k超过list长度");
+                    return;
+                }
+
+                System.out.println(target + ", " + targetPtr);
+                return;
+            }
+
+
+            if (endPtr - targetPtr == k - 1) {
+                ++targetPtr;
+                target = target.next;
+            }
+
             ++endPtr;
+        }
+    }
 
-            if (endPtr == k) {
-                ++kPtr;
+    /*
+        两次遍历：
+            第一次计算链表长度
+            第二次计算倒数第k个值，即下标为size - k的元素
+      */
+    private static void findKthToTail_Twice(Node node, int k) {
+        if (node == null || k <= 0) return;
+
+        int size = 0;
+
+        Node nodeStart = node;
+        while (nodeStart != null) {
+            ++size;
+            nodeStart = nodeStart.next;
+        }
+
+        for (int i = 0; i < size; ++i) {
+            if (i == size - k) {
+                System.out.println(node);
+                return;
             }
 
             node = node.next;
         }
 
+        System.out.println("k超过list长度");
     }
 
     /*
         放到栈里弹出k个
      */
     private static void printReverseNumberK(Node node, int k) {
+        if (node == null || k <= 0) return;
+
         Stack<Node> stack = new Stack<>();
 
         while (node != null) {
