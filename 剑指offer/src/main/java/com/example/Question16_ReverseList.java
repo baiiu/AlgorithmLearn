@@ -10,7 +10,7 @@ import java.util.Stack;
  * date: on 17/6/7 10:42
  * description:
  */
-class Question16_ {
+class Question16_ReverseList {
 
     /**
      * 反转链表
@@ -38,25 +38,31 @@ class Question16_ {
         reverseList_Simple(nodeA);
 //        reverseList(nodeA);
 //        reverseList_Stack(nodeA);
-        System.out.println();
     }
 
     // 一遍遍历
     private static void reverseList_Simple(Node node) {
         if (node == null) return;
 
-        Node nodeNext = node.next, nodeTemp = null, nodePre = node;
+        Node pReverseHead = null;
+        Node pNode = node;
+        Node pPrev = null;
 
+        // 当前结点pNode，下一个结点pNext，上一个结点pPrev
+        while (pNode != null) {
+            Node pNext = pNode.next;
 
-        while (nodeNext != null) {
-            nodeTemp = nodeNext.next;
+            if (pNext == null) {
+                pReverseHead = pNode;
+            }
 
-            nodeNext.next = nodePre;
+            pNode.next = pPrev;
 
-            nodePre = nodeNext;
-            nodeNext = nodeTemp;
+            pPrev = pNode;
+            pNode = pNext;
         }
 
+        CommonUtil.printNodeList(pReverseHead);
     }
 
     private static void reverseList(Node node) {
