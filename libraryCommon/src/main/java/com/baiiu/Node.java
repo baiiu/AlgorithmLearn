@@ -8,12 +8,17 @@ package com.baiiu;
 public class Node {
     public String data;
     public Node next;
+    public int numberData;
 
     public Node() {
     }
 
     public Node(String data) {
         this.data = data;
+    }
+
+    public Node(int numberData) {
+        this.numberData = numberData;
     }
 
     @Override
