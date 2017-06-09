@@ -40,28 +40,42 @@ class Question17_ {
         mergeList(nodeA, node1);
     }
 
-
+    /*
+        归并两个链表，就是在正确的位置插入元素。
+        所以核心是addNode(int index, Node node)方法
+     */
     private static void mergeList(Node list1, Node list2) {
         /*
             归并两个链表，将list2插入到list1
          */
 
-        int ptr1 = 0, ptr2 = 0;
-        Node node1 = list1, node2 = list2, pHead = node1;
-
-        while (node1 != null) {
-            if (node2.numberData < node1.numberData) {
-                // 第二个链表的结点小于第一个链表的结点
-                node1.next = node2;
-
-            }
-
-
-            ++ptr1;
+        Node node1 = list1, node2 = list2, pHead = null;
+        if (node1.numberData < node2.numberData) {
+            pHead = node1;
             node1 = node1.next;
+        } else {
+            pHead = node2;
+            node2 = node2.next;
         }
 
+        while (node1 != null) {
+            Node node1Next = node1.next;
+            Node node2Next = node2.next;
+
+            if (node1.numberData <= node2.numberData) {
+                pHead.next = node1;
+                pHead = node1;
+                node1 = node1.next;
+                node2 = node2Next;
+            } else {
+                pHead.next = node2;
+            }
+        }
+    }
+
+    private static void addNode(Node node, Node nodeInsert) {
 
     }
+
 
 }
