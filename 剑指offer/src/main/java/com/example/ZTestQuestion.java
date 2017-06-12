@@ -53,7 +53,7 @@ public class ZTestQuestion {
             解决面试题的思路：
                 1. 画图让抽象问题形象化
          */
-        Question19_.test();
+        Question19_MirrorOfBinaryTree.test();
     }
 
 }
