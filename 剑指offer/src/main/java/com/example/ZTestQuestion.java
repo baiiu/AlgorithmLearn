@@ -35,20 +35,25 @@ public class ZTestQuestion {
                 功能测试
                 边界测试
                 负面测试
+            代码的鲁棒性Robust，健壮性:
+               采取防御式编程
+               处理无效的输入
          */
 //        Question11_Power.test();
 //        Question12_PrintOneToMaxDigits.test();
 //        Question12_BigIntegerPlus.test();
 //        Question13_DeleteNodeInList.test();
 //        Question14_ReorderArray.test();
-
-        /*
-            代码的鲁棒性Robust，健壮性
-         */
 //        Question15_KthNodeFromEnd.test();
 //        Question16_ReverseList.test();
 //        Question17_MergeSortedLists.test();
-        Question18_.test();
+//        Question18_SubstructureInTree.test();
+
+        /*
+            解决面试题的思路：
+                1. 画图让抽象问题形象化
+         */
+        Question19_.test();
     }
 
 }

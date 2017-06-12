@@ -12,7 +12,7 @@ import java.util.Stack;
  * --B------C
  * D---E--F---G
  */
-class Question18_ {
+class Question18_SubstructureInTree {
 
     /**
      * 树的子结构
@@ -40,8 +40,8 @@ class Question18_ {
         childTree.lChild = new BiNode("E");
         childTree.rChild = new BiNode("C");
 
-        childTree = DNode;
-        childTree = BNode;
+        //childTree = DNode;
+        //childTree = BNode;
 
         isChildTree_Funny(tree, childTree);
         System.out.println(isChildTree(tree, childTree) ? "包含" : "不包含");
