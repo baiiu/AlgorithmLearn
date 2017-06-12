@@ -1,6 +1,7 @@
 package com.baiiu.tree.printTraversal;
 
-import com.baiiu.tree.BiNode;
+
+import com.baiiu.BiNode;
 
 /**
  * author: baiiu

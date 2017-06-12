@@ -47,7 +47,8 @@ public class ZTestQuestion {
          */
 //        Question15_KthNodeFromEnd.test();
 //        Question16_ReverseList.test();
-        Question17_.test();
+//        Question17_MergeSortedLists.test();
+        Question18_.test();
     }
 
 }

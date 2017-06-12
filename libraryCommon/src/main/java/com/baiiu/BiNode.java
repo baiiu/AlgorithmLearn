@@ -1,12 +1,11 @@
-package com.baiiu.tree;
+package com.baiiu;
 
 /**
- * author: baiiu
- * date: on 17/5/19 14:57
+ * auther: baiiu
+ * time: 17/5/29 29 23:09
  * description:
  */
 public class BiNode {
-
     public String data;
     public BiNode lChild;
     public BiNode rChild;
@@ -22,4 +21,6 @@ public class BiNode {
     public String toString() {
         return data;
     }
+
+
 }

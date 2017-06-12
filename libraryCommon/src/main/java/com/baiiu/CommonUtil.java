@@ -45,7 +45,7 @@ public class CommonUtil {
      */
     public static void printNodeList(Node node) {
         while (node != null) {
-            System.out.print(node.data);
+            System.out.print(node);
             node = node.next;
         }
     }
