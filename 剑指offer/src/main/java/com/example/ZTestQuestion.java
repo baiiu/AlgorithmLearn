@@ -52,8 +52,10 @@ public class ZTestQuestion {
         /*
             解决面试题的思路：
                 1. 画图让抽象问题形象化
+                2. 举例让抽象问题具体化
          */
-        Question19_MirrorOfBinaryTree.test();
+//        Question19_MirrorOfBinaryTree.test();
+        Question20_PrintMatrix.test();
     }
 
 }
