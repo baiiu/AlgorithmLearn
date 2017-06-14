@@ -55,7 +55,9 @@ public class ZTestQuestion {
                 2. 举例让抽象问题具体化
          */
 //        Question19_MirrorOfBinaryTree.test();
-        Question20_PrintMatrix.test();
+//        Question20_PrintMatrix.test();
+//        Question21_MinInStack.test();
+        Question22_.test();
     }
 
 }
