@@ -57,7 +57,10 @@ public class ZTestQuestion {
 //        Question19_MirrorOfBinaryTree.test();
 //        Question20_PrintMatrix.test();
 //        Question21_MinInStack.test();
-        Question22_.test();
+//        Question22_StackPushPopOrder.test();
+//        Question23_TreeLevelOrder.test();
+        Question24_.test();
+
     }
 
 }

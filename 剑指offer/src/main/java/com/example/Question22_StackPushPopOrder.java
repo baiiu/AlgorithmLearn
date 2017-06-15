@@ -1,13 +1,14 @@
 package com.example;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * author: baiiu
  * date: on 17/6/14 10:56
  * description:
  */
-class Question22_ {
+class Question22_StackPushPopOrder {
 
     /**
      * 栈的压入、弹出序列
@@ -20,15 +21,63 @@ class Question22_ {
      * 但4，3，5，1，2就不可能是该压栈序列的弹出序列。
      */
     static void test() {
-        int[] input = new int[]{1, 2, 3, 4, 5};
-//        int[] output = new int[]{5, 4, 3, 2, 1};
-//        int[] output = new int[]{4, 5, 3, 2, 1};
-//        int[] output = new int[]{4, 3, 5, 1, 2};
-        int[] output = new int[]{5, 4, 1, 2, 3};
+//        int[] input = new int[]{1, 2, 3, 4, 5};
+//        int[] output = new int[]{1, 2, 3, 4, 5}; //是
+//        int[] output = new int[]{5, 4, 3, 2, 1};//是
+//        int[] output = new int[]{4, 5, 3, 2, 1};//是
+//        int[] output = new int[]{4, 3, 5, 1, 2};//不是
+//        int[] output = new int[]{5, 4, 1, 2, 3};//不是
+
+        int[] input = new int[]{1, 2, 3};
+        int[] output = new int[]{3, 1, 2}; //不是
+//        int[] output = new int[]{3, 2, 1};
+//        int[] output = new int[]{1, 2, 3};
+//        int[] output = new int[]{2, 3, 1};
+//        int[] output = new int[]{2, 1, 3};
 
 
-        System.out.println(judge(input, output) ? "是" : "不是");
+//        System.out.println(judge_Wrong(input, output) ? "是" : "不是");
+        System.out.println(isPopOrder(input, output) ? "是" : "不是");
+
     }
+
+    /*
+        判断一个序列是不是栈的弹出序列的规律：
+            如果下一个弹出的数字刚好是栈顶数字，那么直接弹出；
+            如果不是，则把压榨序列中还没有入栈的数字压入栈中，直到把下一个需要弹出的数字压入栈顶为止。
+
+            如果所有的数字都压入栈了仍然没有找到下一个弹出的数字，那么该序列不可能是一个弹出序列。
+
+        需要一个辅助栈：
+            这种思想得要学下，使用额外的辅助工具、手段。不是单纯的数组运算。
+     */
+    private static boolean isPopOrder(int[] input, int[] output) {
+        if (input == null || output == null) return false;
+        if (input.length != output.length) return false;
+        if (input.length == 1 || input.length == 2) return true;
+
+        int pushIndex = 0, popIndex = 0;
+
+        Stack<Integer> stack = new Stack<>();
+
+        while (popIndex < output.length) {
+            int popNumber = output[popIndex];
+
+            while (stack.empty() || stack.peek() != popNumber) {
+                if (pushIndex > input.length - 1) {
+                    return false;
+                }
+                stack.push(input[pushIndex]);
+                ++pushIndex;
+            }
+
+            stack.pop();
+            ++popIndex;
+        }
+
+        return true;
+    }
+
 
     /*
         这种算法是错的。
@@ -45,7 +94,7 @@ class Question22_ {
 
         由此可见，将输入输出序列删除到3个值，就可以判断出来。
      */
-    private static boolean judge(int[] input, int[] output) {
+    private static boolean judge_Wrong(int[] input, int[] output) {
         if (input == null && output == null) return true;
         if (input == null || output == null) return false;
         if (input.length != output.length) return false;
