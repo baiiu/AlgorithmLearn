@@ -7,6 +7,7 @@ package com.baiiu;
  */
 public class BiNode {
     public String data;
+    public int numberData;
     public BiNode lChild;
     public BiNode rChild;
 
@@ -15,6 +16,10 @@ public class BiNode {
 
     public BiNode(String data) {
         this.data = data;
+    }
+
+    public BiNode(int numberData) {
+        this.numberData = numberData;
     }
 
     @Override

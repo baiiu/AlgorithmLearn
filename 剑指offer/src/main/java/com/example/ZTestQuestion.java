@@ -59,7 +59,8 @@ public class ZTestQuestion {
 //        Question21_MinInStack.test();
 //        Question22_StackPushPopOrder.test();
 //        Question23_TreeLevelOrder.test();
-        Question24_.test();
+//        Question24_SequenceOfBST.test();
+        Question25_.test();
 
     }
 
