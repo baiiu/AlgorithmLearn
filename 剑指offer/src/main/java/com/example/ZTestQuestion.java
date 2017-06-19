@@ -53,6 +53,7 @@ public class ZTestQuestion {
             解决面试题的思路：
                 1. 画图让抽象问题形象化
                 2. 举例让抽象问题具体化
+                3. 分解让复杂问题简单化
          */
 //        Question19_MirrorOfBinaryTree.test();
 //        Question20_PrintMatrix.test();
@@ -60,7 +61,7 @@ public class ZTestQuestion {
 //        Question22_StackPushPopOrder.test();
 //        Question23_TreeLevelOrder.test();
 //        Question24_SequenceOfBST.test();
-        Question25_.test();
+        Question25_PathInTree.test();
 
     }
 

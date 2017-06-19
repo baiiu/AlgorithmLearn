@@ -16,7 +16,7 @@ import java.util.Stack;
  * <p>
  * 7   8  10  11
  */
-class Question25_ {
+class Question25_PathInTree {
 
     /**
      * 二叉树中和为某一值的路径：
@@ -46,8 +46,84 @@ class Question25_ {
 
             所以，可以看出，路径 <= 2^n(满二叉树)，n表示树的高度
          */
-        findPath(node1, 9);
+        findPath(node1, 11);
+        findPath(node1, 8);
     }
+
+    /*
+        多考虑递归，多考虑使用递归。
+
+        当循环搞不定的时候
+     */
+    private static void findPath(BiNode tree, int target) {
+        if (tree == null) return;
+
+        Stack<BiNode> path = new Stack<>();
+        int currentSum = 0;
+        findPath(tree, target, path, currentSum);
+
+    }
+
+    private static void findPath(BiNode tree, int targetSum, Stack<BiNode> path, int currentSum) {
+        currentSum += tree.numberData;
+
+        path.push(tree);
+
+        boolean isLeaf = tree.lChild == null && tree.rChild == null;
+        if (isLeaf && currentSum == targetSum) {
+            System.out.print("path is ");
+            for (BiNode biNode : path) {
+                System.out.print(biNode.numberData);
+            }
+            System.out.println();
+        }
+
+        if (tree.lChild != null) {
+            findPath(tree.lChild, targetSum, path, currentSum);
+        }
+
+        if (tree.rChild != null) {
+            findPath(tree.rChild, targetSum, path, currentSum);
+        }
+
+        currentSum -= tree.numberData;
+        path.pop();
+    }
+
+
+    /*
+        已经想到前序遍历了。但拘泥于使用单个方法来解决问题。
+
+        即在前序遍历中，使用另外一个数据结构来存储路径。很明显是另外一个栈。
+
+        path这个栈弹出的时机是什么。
+     */
+//    private static void findPath_Foreach(BiNode tree, int target) {
+//        Stack<BiNode> path = new Stack<>();
+//        int sum = 0;
+//
+//        Stack<BiNode> stack = new Stack<>();
+//        while (tree != null || !stack.empty()) {
+//
+//            if (tree != null) {
+//                path.push(tree);
+//                sum += tree.numberData;
+//                if (sum == target) {
+//                    System.out.println(tree.numberData);
+//                }
+//                System.out.println(sum);
+//
+//                stack.push(tree);
+//                tree = tree.lChild;
+//            } else {
+//                tree = stack.pop();
+//                tree = tree.rChild;
+//            }
+//
+//        }
+//
+//    }
+
 
     /*
         直接开始遍历，遇到合适的即输出。
@@ -55,7 +131,7 @@ class Question25_ {
 
         修改遍历方式
      */
-    private static void findPath(BiNode tree, int target) {
+    private static void findPath_Wrong_self(BiNode tree, int target) {
         if (tree == null) return;
 
         Stack<BiNode> stack = new Stack<>();
@@ -68,7 +144,6 @@ class Question25_ {
 //                System.out.print(tree.numberData);
                 stack.push(tree);
                 sum += tree.numberData;
-                System.out.println(sum);
 
                 if (sum == target) {
                     System.out.println();
