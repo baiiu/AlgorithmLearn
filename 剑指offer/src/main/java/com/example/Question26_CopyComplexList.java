@@ -44,31 +44,6 @@ class Question26_CopyComplexList {
 
     }
 
-
-//    private static void copyComplexList(ComplexListNode node) {
-//        ComplexListNode cloneHead = new ComplexListNode();
-//        cloneHead.mValue = node.mValue + "'";
-////        cloneHead.mSibling = node.mSibling; // 这种写法是指向原来的
-//
-//        ComplexListNode head = cloneHead;
-//
-//        node = node.mNext;
-//        while (node != null) {
-//            ComplexListNode nodeClone = new ComplexListNode();
-//
-//            nodeClone.mValue = node.mValue + "'";
-////            nodeClone.mSibling = node.mSibling;
-//            cloneHead.mNext = nodeClone;
-//
-//
-//            cloneHead = cloneHead.mNext;
-//            node = node.mNext;
-//        }
-//
-//        printNodeList(head);
-//
-//    }
-
     // 复制链表
     private static void copyComplexList(ComplexListNode node) {
         ComplexListNode current = node;
@@ -140,5 +115,30 @@ class Question26_CopyComplexList {
             return mValue + "; ";
         }
     }
+
+
+//    private static void copyComplexList(ComplexListNode node) {
+//        ComplexListNode cloneHead = new ComplexListNode();
+//        cloneHead.mValue = node.mValue + "'";
+////        cloneHead.mSibling = node.mSibling; // 这种写法是指向原来的
+//
+//        ComplexListNode head = cloneHead;
+//
+//        node = node.mNext;
+//        while (node != null) {
+//            ComplexListNode nodeClone = new ComplexListNode();
+//
+//            nodeClone.mValue = node.mValue + "'";
+////            nodeClone.mSibling = node.mSibling;
+//            cloneHead.mNext = nodeClone;
+//
+//
+//            cloneHead = cloneHead.mNext;
+//            node = node.mNext;
+//        }
+//
+//        printNodeList(head);
+//
+//    }
 
 }
