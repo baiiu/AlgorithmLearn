@@ -1,6 +1,7 @@
 package com.baiiu;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * auther: baiiu
@@ -12,6 +13,10 @@ public class CommonUtil {
 
     public static boolean isEmpty(int[] array) {
         return array == null || array.length == 0 || array.length == 1;
+    }
+
+    public static boolean isEmpty(Collection collection) {
+        return collection == null || collection.isEmpty();
     }
 
     /**
