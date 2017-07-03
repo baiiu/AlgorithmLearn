@@ -6,9 +6,8 @@ import java.util.Map;
 /**
  * author: baiiu
  * date: on 17/6/19 10:42
- * description:
+ * description: 最好的方法未实现
  */
-@Deprecated
 class Question26_CopyComplexList {
 
     /**
@@ -41,7 +40,6 @@ class Question26_CopyComplexList {
         printNodeList(nodeA);
         System.out.println();
         copyComplexList(nodeA);
-
     }
 
     // 复制链表

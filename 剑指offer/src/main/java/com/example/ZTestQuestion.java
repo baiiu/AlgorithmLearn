@@ -62,8 +62,8 @@ public class ZTestQuestion {
 //        Question23_TreeLevelOrder.test();
 //        Question24_SequenceOfBST.test();
 //        Question25_PathInTree.test();
-        Question26_CopyComplexList.test();
-//        Question27_.test();
+//        Question26_CopyComplexList.test();
+        Question27_.test();
     }
 
 }
