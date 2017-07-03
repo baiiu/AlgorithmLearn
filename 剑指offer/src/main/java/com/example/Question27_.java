@@ -35,9 +35,11 @@ class Question27_ {
         node14.lChild = node12;
         node14.rChild = node16;
 
+        BiNode head = null;
+//        print(head);
 //        inorder(node10);
-        BiNode convert = convert(node10);
-        print(convert);
+//        BiNode convert = convert(node10);
+//        print(convert);
     }
 
     /*
@@ -57,7 +59,6 @@ class Question27_ {
         }
 
         return pHeadOfList;
-
     }
 
     private static void convertNode(BiNode node, BiNode pLastNodeInList) {
@@ -100,10 +101,23 @@ class Question27_ {
 
     private static void print(BiNode tree) {
         while (tree != null) {
+            if (tree.lChild == null) {
+                break;
+            }
+
+            tree = tree.lChild;
+        }
+
+        while (tree != null) {
             System.out.print(tree.data + ", ");
             tree = tree.rChild;
         }
-
     }
+
+
+    ////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
+
+
 
 }
