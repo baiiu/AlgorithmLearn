@@ -63,7 +63,7 @@ public class ZTestQuestion {
 //        Question24_SequenceOfBST.test();
 //        Question25_PathInTree.test();
 //        Question26_CopyComplexList.test();
-        Question27_.test();
+        Question27_ConvertBinarySearchTree.test();
     }
 
 }

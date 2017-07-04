@@ -11,7 +11,7 @@ import com.baiiu.BiNode;
  * ----6-----14
  * --4--8--12---16
  */
-class Question27_ {
+class Question27_ConvertBinarySearchTree {
 
     /**
      * 二叉搜索树与双向链表
@@ -48,7 +48,6 @@ class Question27_ {
         使用中序遍历，左根右，
         根据搜索二叉树的特性，左子结点的后继即根结点，根结点的前驱即左子结点；右子结点亦然
      */
-
     private static BiNode convert(BiNode root) {
         // 用于保存处理过程中的双向链表的尾结点
         BiNode[] lastNode = new BiNode[1];
@@ -114,14 +113,6 @@ class Question27_ {
     }
 
     private static void print(BiNode tree) {
-        while (tree != null) {
-            if (tree.lChild == null) {
-                break;
-            }
-
-            tree = tree.lChild;
-        }
-
         while (tree != null) {
             System.out.print(tree.data + ", ");
             tree = tree.rChild;
