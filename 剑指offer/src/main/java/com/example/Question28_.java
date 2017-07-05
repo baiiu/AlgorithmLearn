@@ -14,21 +14,45 @@ public class Question28_ {
      * 例如输入abc，则打印出由a、b、c所能排列出来的所有字符串:abc,acb,bac,bca,cab,cba
      */
     static void test() {
-//        allSort("abc".toCharArray());
-
-//        allSort2("abc".toCharArray());
+        String s = "abc";
+        permutation(s.toCharArray());
     }
 
+    /*
+        求一个位置的所有可能性，就是将它和其他位置交换。
 
-    private static void premutation(char[] chars) {
+        从头开始，固定首字母，求剩余部分字符串的全排列。
+        在剩余部分，也可按照此种方法求。
+
+        怎么求呢？就是将剩余部分的字符串的首字母和其他位置交换。
+
+     */
+    private static void permutation(char[] chars) {
         if (chars == null || chars.length == 0) return;
 
-        premutation(chars, chars[0]);
+        permutation(chars, 0);
     }
 
-    private static void premutation(char[] chars, char charBegin) {
-        for (int i = 0, length = chars.length; i < length; ++i) {
+    private static void permutation(char[] chars, int start) {
+        if (chars.length - 1 == start) {
+            System.out.println(chars);
+        } else {
+            char tmp;
 
+            for (int i = start; i < chars.length; i++) {
+                // 下面是交换元素的位置
+                tmp = chars[start];
+                chars[start] = chars[i];
+                chars[i] = tmp;
+
+                // 处理下一个位置
+                permutation(chars, start + 1); // 剩余部分
+
+                // 恢复原状
+                tmp = chars[start];
+                chars[start] = chars[i];
+                chars[i] = tmp;
+            }
         }
 
     }
@@ -98,22 +122,36 @@ public class Question28_ {
 
         char[] printChar = new char[length];
 
+//        for (int i = 0; i < length; ++i) {
+//            printChar[0] = chars[i];
+//
+//            for (int j = 0; j < length; ++j) {
+//                if (j == i) continue; //上一个用过这个了
+//
+//                printChar[1] = chars[j];
+//
+//                for (int k = 0; k < length; ++k) {
+//                    if (k == i || k == j) continue; //前面两个用过了
+//                    printChar[2] = chars[k];
+//                    System.out.println(printChar);
+//                }
+//            }
+//        }
+
+        int currentIndex = 0;
+        int[] usedIndex = new int[length];
         for (int i = 0; i < length; ++i) {
-            printChar[0] = chars[i];
-
-            for (int j = 0; j < length; ++j) {
-                if (j == i) continue; //上一个用过这个了
-
-                printChar[1] = chars[j];
-
-                for (int k = 0; k < length; ++k) {
-                    if (k == i || k == j) continue; //前面两个用过了
-                    printChar[2] = chars[k];
-                    System.out.println(printChar);
-                }
-            }
+            usedIndex[i] = -1;
         }
 
+        for (int i = 0; i < length; ++i) {
+            if (arrayContainsInteger(usedIndex, i)) continue;
+
+            printChar[currentIndex] = chars[i];
+            usedIndex[currentIndex] = i;
+            currentIndex++;
+        }
+        System.out.println(printChar);
 
     }
 
