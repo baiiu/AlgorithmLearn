@@ -14,11 +14,24 @@ public class Question28_ {
      * 例如输入abc，则打印出由a、b、c所能排列出来的所有字符串:abc,acb,bac,bca,cab,cba
      */
     static void test() {
-//        allSort("abb".toCharArray());
+//        allSort("abc".toCharArray());
 
-        allSort2("abc".toCharArray());
+//        allSort2("abc".toCharArray());
     }
 
+
+    private static void premutation(char[] chars) {
+        if (chars == null || chars.length == 0) return;
+
+        premutation(chars, chars[0]);
+    }
+
+    private static void premutation(char[] chars, char charBegin) {
+        for (int i = 0, length = chars.length; i < length; ++i) {
+
+        }
+
+    }
 
     /*
         在选中的第一位后，应该选剩下的没用过的。可以传入 func(chars,int[] usedIndex)，在这里面选。
@@ -36,39 +49,44 @@ public class Question28_ {
         }
 
         char[] printChars = new char[length];
-
         countPrintChars(chars, printChars, 0, usedIndex);
     }
 
     private static void countPrintChars(char[] chars, char[] printChars, int currentIndex, int[] usedIndex) {
-        boolean flagUsed = false;
         for (int i = 0, length = chars.length; i < length; ++i) {
-
-            for (int j = 0; j < length; ++j) {
-                if (usedIndex[j] == i) {
-                    flagUsed = true;
-                    break; //这个i上的字符用过了,跳出循环，++i
-                }
-
-                flagUsed = false;
-                usedIndex[currentIndex] = i;
-
-                printChars[currentIndex] = chars[i];
-                ++currentIndex;
-
-                if (currentIndex == length) {
-                    currentIndex = 0;
-                    System.out.println(printChars);
-                    return;
-                }
-                break;
+            if (arrayContainsInteger(usedIndex, i)) {
+                continue;
             }
 
-            if (!flagUsed) {
-                countPrintChars(chars, printChars, currentIndex, usedIndex);
-            }
+            usedIndex[currentIndex] = i;
 
+            printChars[currentIndex] = chars[i];
+            ++currentIndex;
+
+            if (currentIndex == length) {
+                currentIndex = 0;
+                System.out.println(printChars);
+                for (int k = 0; k < length; ++k) {
+                    usedIndex[k] = -1;
+                }
+                return;
+            }
+            break;
         }
+
+        countPrintChars(chars, printChars, currentIndex, usedIndex);
+    }
+
+    private static boolean arrayContainsInteger(int[] array, int target) {
+        if (array == null || array.length == 0) return false;
+
+        for (int i = 0, length = array.length; i < length; ++i) {
+            if (array[i] == target) {
+                return true;
+            }
+        }
+
+        return false;
 
     }
 
@@ -93,9 +111,7 @@ public class Question28_ {
                     printChar[2] = chars[k];
                     System.out.println(printChar);
                 }
-
             }
-
         }
 
 
