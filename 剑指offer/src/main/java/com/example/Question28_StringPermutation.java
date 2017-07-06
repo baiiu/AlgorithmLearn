@@ -6,7 +6,7 @@ package com.example;
  * description:
  */
 @SuppressWarnings("ForLoopReplaceableByForEach")
-public class Question28_ {
+class Question28_StringPermutation {
 
     /**
      * 输入一个字符串，打印出该字符串中字符的所有排列。
@@ -16,6 +16,8 @@ public class Question28_ {
     static void test() {
         String s = "abc";
         permutation(s.toCharArray());
+        System.out.println();
+//        permutation_duplicate(s.toCharArray(), 0);
     }
 
     /*
@@ -56,6 +58,43 @@ public class Question28_ {
         }
 
     }
+
+
+    private static void permutation_duplicate(char[] chars, int start) {
+        if (chars.length - 1 == start) {
+            System.out.println(chars);
+        } else {
+            char tmp;
+
+            for (int i = start; i < chars.length; i++) {
+
+                // 下面是交换元素的位置
+                tmp = chars[start];
+                chars[start] = chars[i];
+                chars[i] = tmp;
+
+                // 处理下一个位置
+                permutation_duplicate(chars, start + 1); // 剩余部分
+
+                // 恢复原状
+                tmp = chars[start];
+                chars[start] = chars[i];
+                chars[i] = tmp;
+            }
+        }
+
+    }
+
+    /*
+        全排列去重，首字母不与要交换的字符相等
+     */
+    private static void isSwap(char charBegin, char[] charses) {
+
+    }
+
+
+    //------------------------------------------------------------------------------------------
+
 
     /*
         在选中的第一位后，应该选剩下的没用过的。可以传入 func(chars,int[] usedIndex)，在这里面选。
