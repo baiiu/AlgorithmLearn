@@ -15,8 +15,26 @@ public class CommonUtil {
         return array == null || array.length == 0 || array.length == 1;
     }
 
+    public static boolean isEmpty(Object[] array) {
+        return array == null || array.length == 0 || array.length == 1;
+    }
+
     public static boolean isEmpty(Collection collection) {
         return collection == null || collection.isEmpty();
+    }
+
+    public static boolean arrayContains(Integer[] array, int target) {
+        if (isEmpty(array)) return false;
+
+        for (int i = 0, length = array.length; i < length; i++) {
+            if (array[i] == null) continue;
+
+            if (array[i] == target) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

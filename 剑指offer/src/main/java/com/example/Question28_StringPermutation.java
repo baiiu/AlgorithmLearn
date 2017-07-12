@@ -5,7 +5,6 @@ package com.example;
  * date: on 17/7/4 10:14
  * description:
  */
-@SuppressWarnings("ForLoopReplaceableByForEach")
 class Question28_StringPermutation {
 
     /**

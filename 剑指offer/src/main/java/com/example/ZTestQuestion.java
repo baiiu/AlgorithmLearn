@@ -64,8 +64,12 @@ public class ZTestQuestion {
 //        Question25_PathInTree.test();
 //        Question26_CopyComplexList.test();
 //        Question27_ConvertBinarySearchTree.test();
-        Question28_StringPermutation.test();
+//        Question28_StringPermutation.test();
 
+        /*
+
+         */
+        Question29_.test();
 
     }
 
