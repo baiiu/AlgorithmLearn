@@ -16,4 +16,16 @@ public class Question30_ {
     static void test() {
 
     }
+
+    /*
+        1. 每次都遍历，去除掉上一个最小的数，O(k*n)
+           同： int[k]，从输入数组中获取，填入int[0~k]中
+
+        2. 先排序，后取. O(n*logn)
+
+        3. O(n)
+           桶排序： 以k为length的桶？
+           计数排数： 小于某个值的总次数 >=k 即停止
+     */
+
 }
