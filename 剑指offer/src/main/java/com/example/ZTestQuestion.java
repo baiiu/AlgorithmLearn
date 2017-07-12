@@ -69,7 +69,7 @@ public class ZTestQuestion {
         /*
 
          */
-        Question29_.test();
+        Question29_MoreThanHalfNumber.test();
 
     }
 
