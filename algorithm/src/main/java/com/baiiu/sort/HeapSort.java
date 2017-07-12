@@ -22,9 +22,9 @@ class HeapSort {
 
         // i = (lastLeftIndex - 1) / 2 = (size -2) /2即堆的末端子节点，
         // 从末子节点往上开始调整堆，使得子节点永远小于父节点。
-        for (i = (size - 2) >> 2; i >= 0; --i) {
-            //maxHeapify(array, i, size);
-            //maxHeapify2(array, i, size);
+        for (i = (size - 2) >> 1; i >= 0; --i) {
+//            maxHeapify(array, i, size);
+//            maxHeapify2(array, i, size);
             maxHeapify3(array, i, size);
         }
 

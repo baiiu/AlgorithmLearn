@@ -10,7 +10,7 @@ import com.baiiu.CommonUtil;
 class TestSort {
 
     public static void main(String[] args) {
-        int[] array = new int[] { 5, 0, 10, 0, 2, 6, 9, 7, 8, -1, 3 };//11
+        int[] array = new int[]{5, 0, 10, 0, 2, 6, 9, 7, 8, -1, 3};//11
 
         //BubbleSort.simpleSwapSort(array);
         //BubbleSort.bubbleSort(array);
@@ -25,9 +25,9 @@ class TestSort {
 
         //ShellSort.shellSort(array);
 
-        //HeapSort.heapSort(array);
+        HeapSort.heapSort(array);
 
-        //MergeSort.mergeSort(array);
+//        MergeSort.mergeSort(array);
         //MergeSortWhile.mergeSort(array);
 
         //QuickSort.quickSort(array);
@@ -35,7 +35,7 @@ class TestSort {
 
         //array = CountSort.countSort(array);
 
-        BucketSort.bucketSort(array, 5);
+//        BucketSort.bucketSort(array, 5);
 
 
         //RadixSort.radixSort(array); //需要对负数进行单独处理。
