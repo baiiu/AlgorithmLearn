@@ -63,6 +63,16 @@ public class CommonUtil {
         System.out.println(Arrays.toString(array));
     }
 
+    public static void printArray(int[] array, int length) {
+        if (isEmpty(array) || length < 0 || length >= array.length) return;
+
+        for (int i = 0; i < length; ++i) {
+            System.out.print(array[i] + ", ");
+        }
+
+    }
+
+
     /**
      * 打印链表
      */

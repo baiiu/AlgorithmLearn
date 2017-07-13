@@ -69,7 +69,8 @@ public class ZTestQuestion {
         /*
 
          */
-        Question29_MoreThanHalfNumber.test();
+//        Question29_MoreThanHalfNumber.test();
+        Question30_KLeastNumbers.test();
 
     }
 

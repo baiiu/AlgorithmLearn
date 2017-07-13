@@ -65,11 +65,11 @@ class Question29_MoreThanHalfNumber {
         while (index != middle) {
             if (index > middle) {
                 end = index - 1;
-                index = partition(array, start, end);
             } else {
                 start = index + 1;
-                index = partition(array, start, end);
             }
+
+            index = partition(array, start, end);
         }
 
         System.out.println(array[middle]);
