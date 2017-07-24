@@ -71,7 +71,8 @@ public class ZTestQuestion {
          */
 //        Question29_MoreThanHalfNumber.test();
 //        Question30_KLeastNumbers.test();
-        Question31_.test();
+//        Question31_GreatestSumOfSubarrays.test();
+        Question32_.test();
     }
 
 }
