@@ -10,7 +10,7 @@ import java.util.List;
  * date: on 17/7/24 11:23
  * description:
  */
-class Question32_ {
+class Question32_NumberOf1 {
 
     /**
      * 从1到n整数中1出现的次数
