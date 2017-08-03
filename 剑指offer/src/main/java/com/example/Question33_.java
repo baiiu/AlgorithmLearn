@@ -2,12 +2,15 @@ package com.example;
 
 import com.baiiu.CommonUtil;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * author: baiiu
  * date: on 17/7/28 09:41
  * description:
  */
-public class Question33_ {
+class Question33_ {
 
     /**
      * 把数组排成最小的数
@@ -21,7 +24,33 @@ public class Question33_ {
         int[] ints = new int[]{3, 32, 321};
 
         minNumber(ints);
-//        powerBase10(ints);
+        printMinNumber(ints);
+    }
+
+    /*
+        排序
+     */
+    private static void printMinNumber(int[] numbers) {
+        if (CommonUtil.isEmpty(numbers)) return;
+
+        Integer[] integers = new Integer[numbers.length];
+        for (int i = 0, length = numbers.length; i < length; ++i) {
+            integers[i] = numbers[i];
+        }
+
+        Arrays.sort(integers, new Comparator<Integer>() {
+            //对数组numbers用自定义方法排序
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return (o1 + "" + o2).compareTo(o2 + "" + o1);
+            }
+        });
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < integers.length; i++) {
+            builder.append(integers[i]);
+        }
+
+        System.out.println(builder.toString());
     }
 
     /*
