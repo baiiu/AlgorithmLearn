@@ -10,7 +10,7 @@ import java.util.Comparator;
  * date: on 17/7/28 09:41
  * description:
  */
-class Question33_ {
+class Question33_SortArrayForMinNumber {
 
     /**
      * 把数组排成最小的数

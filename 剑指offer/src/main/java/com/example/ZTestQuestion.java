@@ -67,13 +67,20 @@ public class ZTestQuestion {
 //        Question28_StringPermutation.test();
 
         /*
-
+            时间效率
          */
 //        Question29_MoreThanHalfNumber.test();
 //        Question30_KLeastNumbers.test();
 //        Question31_GreatestSumOfSubarrays.test();
 //        Question32_NumberOf1.test();
-        Question33_.test();
+//        Question33_SortArrayForMinNumber.test();
+
+        /*
+            时间效率与空间效率的平衡
+            以时间换空间、以空间换时间
+         */
+
+
     }
 
 }
