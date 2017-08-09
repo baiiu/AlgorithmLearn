@@ -7,7 +7,7 @@ import java.util.Arrays;
  * date: on 17/8/3 10:13
  * description:
  */
-class Question34_ {
+class Question34_UglyNumber {
 
     /**
      * 我们把只包含因子2、3、5的数称为丑数。1是第一个丑数
@@ -17,9 +17,9 @@ class Question34_ {
      */
     static void test() {
         int index = 1500;
-//        System.out.println(isAugly(732421875));
+//        System.out.println(isAgly(732421875));
 
-        countAuglyNumber(index);
+        countAglyNumber(index);
         countToTarget(index);
     }
 
@@ -33,7 +33,7 @@ class Question34_ {
         1) 现有的已排序数列中所有数字分别*2、*3、*5中取最小的大于当前数列最大项的值就OK
         2) 并不必要所有数字，而是从某个*2、*3、*5时已经大于当前数列的最大值，此时只有3个值，在这三个值里选最小的
      */
-    private static void countAuglyNumber(int index) {
+    private static void countAglyNumber(int index) {
         int[] auglyNumbers = new int[index];
         auglyNumbers[0] = 1;
 
@@ -78,7 +78,7 @@ class Question34_ {
 
         int number = 1;
         while (true) {
-            if (isAugly(number)) {
+            if (isAgly(number)) {
                 auglyNumbers[targetCount] = number;
 
                 ++targetCount;
@@ -98,7 +98,7 @@ class Question34_ {
 
     }
 
-    private static boolean isAugly(int number) {
+    private static boolean isAgly(int number) {
         if (number == 1) return true;
 
         while (number % 2 == 0) {

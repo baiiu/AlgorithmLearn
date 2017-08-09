@@ -11,6 +11,10 @@ import java.util.Collection;
 @SuppressWarnings("WeakerAccess")
 public class CommonUtil {
 
+    public static boolean isEmpty(String s) {
+        return s == null || s.length() == 0;
+    }
+
     public static boolean isEmpty(int[] array) {
         return array == null || array.length == 0 || array.length == 1;
     }
