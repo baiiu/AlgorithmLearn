@@ -79,6 +79,7 @@ public class ZTestQuestion {
             时间效率与空间效率的平衡
             以时间换空间、以空间换时间
          */
+        Question34_.test();
 
 
     }
