@@ -17,7 +17,7 @@ class Question34_ {
      */
     static void test() {
         int index = 1500;
-        System.out.println(isAugly(732421875));
+//        System.out.println(isAugly(732421875));
 
         countAuglyNumber(index);
         countToTarget(index);
@@ -38,38 +38,33 @@ class Question34_ {
         auglyNumbers[0] = 1;
         int currentMaxIndex = 0, currentMax = auglyNumbers[currentMaxIndex];
 
-        int M2, M3, M5, min; //最小的三个数
+        int M2 = 0, M3 = 0, M5 = 0;//最小的三个数
 
-        while (true) {
-            M2 = M3 = M5  = 0;
+        while (currentMaxIndex < index) {
 
             for (int i = 0; i <= currentMaxIndex; ++i) {
-                if (auglyNumbers[i] * 2 <= currentMax) ++M2;
-                if (auglyNumbers[i] * 3 <= currentMax) ++M3;
-                if (auglyNumbers[i] * 5 <= currentMax) ++M5;
+                if (auglyNumbers[M2] * 2 <= currentMax) ++M2;
+                if (auglyNumbers[M3] * 3 <= currentMax) ++M3;
+                if (auglyNumbers[M5] * 5 <= currentMax) ++M5;
             }
 
-            M2 = auglyNumbers[M2] * 2;
-            M3 = auglyNumbers[M3] * 3;
-            M5 = auglyNumbers[M5] * 5;
+            currentMax = min(auglyNumbers[M2] * 2, auglyNumbers[M3] * 3, auglyNumbers[M5] * 5);
 
             ++currentMaxIndex;
+            if (currentMaxIndex == index) break;
 
-            if (currentMaxIndex == index) {
-                System.out.println(auglyNumbers[index - 1]);
-                break;
-            }
-
-
-            min = M2 < M3 ? M2 : M3;
-            min = min < M5 ? min : M5;
-            currentMax = min;
-
-            auglyNumbers[currentMaxIndex] = min;
+            auglyNumbers[currentMaxIndex] = currentMax;
         }
 
+        System.out.println(auglyNumbers[index - 1]);
         System.out.println(Arrays.toString(auglyNumbers));
+    }
 
+    private static int min(int number1, int number2, int number3) {
+        int min = number1 < number2 ? number1 : number2;
+        min = min < number3 ? min : number3;
+
+        return min;
     }
 
 
