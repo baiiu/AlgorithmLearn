@@ -36,8 +36,8 @@ class Question34_ {
     private static void countAuglyNumber(int index) {
         int[] auglyNumbers = new int[index];
         auglyNumbers[0] = 1;
-        int currentMaxIndex = 0, currentMax = auglyNumbers[currentMaxIndex];
 
+        int currentMaxIndex = 0, currentMax = auglyNumbers[currentMaxIndex];
         int M2 = 0, M3 = 0, M5 = 0;//最小的三个数
 
         while (currentMaxIndex < index) {
