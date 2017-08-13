@@ -64,7 +64,7 @@ public class ZTestQuestion {
 //        Question25_PathInTree.test();
 //        Question26_CopyComplexList.test();
 //        Question27_ConvertBinarySearchTree.test();
-//        Question28_StringPermutation.test();
+        Question28_StringPermutation.test();
 
         /*
             时间效率
@@ -80,7 +80,7 @@ public class ZTestQuestion {
             以时间换空间、以空间换时间
          */
 //        Question34_UglyNumber.test();
-        Question35_FindNotRepeatingChar.test();
+//        Question35_FindNotRepeatingChar.test();
 
 
     }
