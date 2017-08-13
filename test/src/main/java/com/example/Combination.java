@@ -40,6 +40,14 @@ public class Combination {
         }
     }
 
+    /*
+        在长度为n的字符串中求m个字符的组合。我们先从头扫描字符串的第一个字符。
+
+        针对第一个字符，我们有两种选择：
+            第一是把这个字符放到组合中去，接下来我们需要在剩下的n-1个字符中选取m-1个字符；
+            第二是不把这个字符放到组合中去，接下来我们需要在剩下的n-1个字符中选择m个字符。
+            这两种选择都很容易用递归实现。
+     */
     private static void combination(char[] chars) {
         if (chars == null || chars.length == 0) return;
 

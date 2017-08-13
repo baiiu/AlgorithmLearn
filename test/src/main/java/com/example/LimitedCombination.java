@@ -13,26 +13,12 @@ package com.example;
 public class LimitedCombination {
 
     public static void main(String[] args) {
-        combination(2);
     }
 
     /*
 
      */
-    private static void combination(int maxNumber) {
-        int n = 1 << maxNumber;
-
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < maxNumber; ++j) {
-                if ((i & (1 << j)) != 0) {
-                    builder.append(String.valueOf(i));
-                }
-            }
-            System.out.println(builder.toString());
-
-            builder.delete(0, builder.length());
-        }
+    private static void combination(int maxNumber,int k) {
 
     }
 
