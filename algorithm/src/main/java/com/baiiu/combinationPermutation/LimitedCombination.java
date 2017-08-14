@@ -1,4 +1,4 @@
-package com.example;
+package com.baiiu.combinationPermutation;
 
 import java.util.Stack;
 
@@ -29,11 +29,6 @@ public class LimitedCombination {
             2) 不将其放入组合内，从剩下的 n-1 个数中 选取 k 个数
      */
     private static void combination(int n, int start, int number, Stack<Integer> stack) {
-//        if (start == number) {
-//            System.out.println(stack);
-//            return;
-//        }
-
         if (number == 0) {
             System.out.println(stack);
             return;
@@ -47,7 +42,6 @@ public class LimitedCombination {
         combination(n, start + 1, number - 1, stack);
         stack.pop();
         combination(n, start + 1, number, stack);
-
     }
 
 }

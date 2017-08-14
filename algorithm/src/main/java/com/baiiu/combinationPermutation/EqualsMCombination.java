@@ -1,4 +1,4 @@
-package com.example;
+package com.baiiu.combinationPermutation;
 
 import java.util.Stack;
 

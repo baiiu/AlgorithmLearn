@@ -1,4 +1,4 @@
-package com.example;
+package com.baiiu.combinationPermutation;
 
 /**
  * auther: baiiu
