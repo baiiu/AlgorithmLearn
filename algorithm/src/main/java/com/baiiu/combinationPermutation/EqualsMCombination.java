@@ -12,19 +12,31 @@ import java.util.Stack;
 public class EqualsMCombination {
 
     public static void main(String[] args) {
-        findSumIsM(5, 12);
+//        findSumIsM(5, 12);
         System.out.println();
         System.out.println();
-        findSumIsM_Simple(5, 12);
+        findSumIsM_Simple(5, 16);
     }
 
     private static void findSumIsM_Simple(int n, int m) {
+        if (m > ((1 + n) * n / 2)) {
+            System.out.println("m太大了");
+        }
 
         Stack<Integer> stack = new Stack<>();
         findIt_Simple(n, m, stack);
-
     }
 
+    /*
+        从最大值开始开始寻找，即从n开始
+
+        对于每个n，都有两种选择：
+            1. 将即计入和m中，在剩下的n-1个数字中继续寻找和为 n-m 的数字
+            2. 不计算于其中，在剩下的 n-1 个数字中寻找和为m 的数字
+
+        终止条件： m==0(找完了)
+                 n<0 || m<0 (找不到)
+     */
     private static void findIt_Simple(int n, int m, Stack<Integer> stack) {
         if (n < 0 || m < 0) {
             return;
@@ -56,7 +68,6 @@ public class EqualsMCombination {
            不把这个数字放到组合中，在剩下的 n-1 个 数字中选取m个
      */
     private static void findSumIsM(int n, int m) {
-
         if (m > ((1 + n) * n / 2)) {
             System.out.println("m太大了");
         }

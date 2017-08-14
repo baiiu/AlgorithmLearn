@@ -5,14 +5,17 @@ package com.baiiu.combinationPermutation;
  * time: 17/8/13 13 11:17
  * description: 去重的全排列
  */
-public class PermutationTest {
+public class Permutation {
 
     public static void main(String[] args) {
-        String s = "abbb";
+        String s = "abc";
         permutation(s.toCharArray(), 0);
     }
 
 
+    /*
+        从第一个字符起，挨个与后面每个字符交换。
+     */
     private static void permutation(char[] chars, int start) {
         if (chars == null || chars.length == 0) return;
 

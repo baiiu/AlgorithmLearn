@@ -16,11 +16,20 @@ public class Combination {
      */
     public static void main(String[] args) {
         String s = "abc";
-//        combination_bit(s.toCharArray());
+        combination_bit(s.toCharArray());
 
-        combination(s.toCharArray());
+//        combination(s.toCharArray());
     }
 
+    /*
+        共有 2^n -1 中组合
+
+        使用位运算， 001表示a, 010表示b， 100表示c
+
+        遍历 [1, 2^n) 个数字，对每个数字进行位运算，找出所有组合
+
+        O(2^n) 指数级
+     */
     private static void combination_bit(char[] chars) {
         if (chars == null || chars.length == 0) return;
 
@@ -28,7 +37,7 @@ public class Combination {
         int n = 1 << length;
 
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < n; ++i) {
+        for (int i = 1; i < n; ++i) {
             for (int j = 0; j < length; ++j) {
                 if ((i & (1 << j)) != 0) { // 001 010 100
                     builder.append(chars[j]);
@@ -76,31 +85,4 @@ public class Combination {
         stack.pop();
         combination(chars, start + 1, number, stack);
     }
-
-
-    /*
-void Combination(char *string ,int number , vector<char> &result)
-{
-    assert(string != NULL);
-    if(number == 0)
-    {
-        static int num = 1;
-        printf("第%d个组合\t",num++);
-
-        vector<char>::iterator iter = result.begin();
-        for( ; iter != result.end() ; ++iter)
-            printf("%c",*iter);
-        printf("\n");
-        return ;
-    }
-    if(*string == '\0')
-        return ;
-    result.push_back(*string);
-    Combination(string + 1 , number - 1 , result);
-    result.pop_back();
-    Combination(string + 1 , number , result);
-}
-     */
-
-
 }

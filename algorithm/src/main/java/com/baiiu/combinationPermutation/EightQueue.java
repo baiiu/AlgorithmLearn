@@ -15,9 +15,9 @@ import com.baiiu.CommonUtil;
  */
 public class EightQueue {
     public static void main(String[] args) {
-        int[] ints = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
+        int[] arr = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
 
-        sortQueue(ints, 0);
+        sortQueue(arr, 0);
     }
 
     /*
@@ -33,20 +33,20 @@ public class EightQueue {
             处于同一列的 --> 任意两个i上的数字相同，也是不可能的
             任意两个皇后处于同一对角线的 --> arr[i] - i相等了
      */
-    private static void sortQueue(int[] ints, int start) {
-        if (start == ints.length - 1) {
+    private static void sortQueue(int[] arr, int start) {
+        if (start == arr.length - 1) {
             // 过滤
-            if (isDiagonal(ints)) {
+            if (isDiagonal(arr)) {
                 return;
             }
 
-            CommonUtil.printArray(ints);
+            CommonUtil.printArray(arr);
 
         } else {
-            for (int i = start, length = ints.length; i < length; ++i) {
-                CommonUtil.swap(ints, start, i);
-                sortQueue(ints, start + 1);
-                CommonUtil.swap(ints, start, i);
+            for (int i = start, length = arr.length; i < length; ++i) {
+                CommonUtil.swap(arr, start, i);
+                sortQueue(arr, start + 1);
+                CommonUtil.swap(arr, start, i);
             }
         }
     }
@@ -65,6 +65,5 @@ public class EightQueue {
 
         return false;
     }
-
 
 }
