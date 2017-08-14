@@ -41,7 +41,7 @@ public class Combination {
     }
 
     /*
-        在长度为n的字符串中求m个字符的组合。我们先从头扫描字符串的第一个字符。
+        在长度为n的字符串中求m个字符的组合, 1 <= m <= n。我们先从头扫描字符串的第一个字符。
 
         针对第一个字符，我们有两种选择：
             第一是把这个字符放到组合中去，接下来我们需要在剩下的n-1个字符中选取m-1个字符；
@@ -57,6 +57,10 @@ public class Combination {
         }
     }
 
+    /*
+        start指从哪开始，即 n 还是 n - 1个字符
+        number是指几位组合， 1位组合还是n位组合
+     */
     private static void combination(char[] chars, int start, int number, Stack<Character> stack) {
         if (number == 0) {
             System.out.println(stack.toString());
