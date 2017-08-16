@@ -7,7 +7,7 @@ import com.baiiu.CommonUtil;
  * time: 17/8/10 10 07:22
  * description:
  */
-class Question36_ {
+class Question36_InversePairs {
 
     /**
      * 数组中的逆序对

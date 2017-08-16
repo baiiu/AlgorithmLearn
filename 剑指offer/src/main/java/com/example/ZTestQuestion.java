@@ -4,6 +4,8 @@ package com.example;
  * author: baiiu
  * date: on 17/5/24 10:21
  * description:
+ * <p>
+ * Question36_InversePairs.test();
  */
 public class ZTestQuestion {
 
@@ -78,11 +80,15 @@ public class ZTestQuestion {
         /*
             时间效率与空间效率的平衡
             以时间换空间、以空间换时间
+
+            降低时间复杂度方法：
+                1. 使用更高效的算法
+                2. 使用空间换取时间
          */
 //        Question34_UglyNumber.test();
 //        Question35_FindNotRepeatingChar.test();
-        Question36_.test();
-
+//        Question36_InversePairs.test();
+        Question37_FirstCommonNodeInLists.test();
     }
 
 }
