@@ -88,7 +88,9 @@ public class ZTestQuestion {
 //        Question34_UglyNumber.test();
 //        Question35_FindNotRepeatingChar.test();
 //        Question36_InversePairs.test();
-        Question37_FirstCommonNodeInLists.test();
+//        Question37_FirstCommonNodeInLists.test();
+        Question38_.test();
+
     }
 
 }
