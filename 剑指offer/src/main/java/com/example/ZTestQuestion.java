@@ -89,7 +89,7 @@ public class ZTestQuestion {
 //        Question35_FindNotRepeatingChar.test();
 //        Question36_InversePairs.test();
 //        Question37_FirstCommonNodeInLists.test();
-        Question38_.test();
+        Question38_NumberOfK.test();
 
     }
 
