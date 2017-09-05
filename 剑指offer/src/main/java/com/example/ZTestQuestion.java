@@ -90,6 +90,7 @@ public class ZTestQuestion {
 //        Question36_InversePairs.test();
 //        Question37_FirstCommonNodeInLists.test();
 //        Question38_NumberOfK.test();
+//        Question39_TreeDepth.test();
         Question39_.test();
 
 
