@@ -92,8 +92,9 @@ public class ZTestQuestion {
 //        Question38_NumberOfK.test();
 //        Question39_TreeDepth.test();
 //        Question39_BalancedBinaryTree.test();
-        Question40_.test();
-
+//        Question40_NumbersAppearOnce.test();
+//        Question41_TwoNumbersWithSum.test();
+        Question41_ContinuesSequenceWithSum.test();
     }
 
 }
