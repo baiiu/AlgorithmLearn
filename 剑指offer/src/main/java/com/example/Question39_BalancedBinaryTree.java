@@ -37,10 +37,34 @@ class Question39_BalancedBinaryTree {
         CNode.lChild = FNode;
         CNode.rChild = GNode;
         GNode.rChild = HNode;
-        DNode.lChild = HNode;
-        HNode.lChild = INode;
+//        HNode.lChild = INode;
 
         System.out.println(isBalanceTree(tree));
+        System.out.println(isBalanceTree2(tree, new int[1]));
+
+//        postOrderRe(tree);
+    }
+
+
+    /*
+        后序遍历，所有结点只遍历一次
+     */
+    private static boolean isBalanceTree2(BiNode node, int[] depth) {
+        if (node == null) return true;
+
+        int[] leftDepth = new int[1];
+        int[] rightDepth = new int[1];
+
+        if (isBalanceTree2(node.lChild, leftDepth) && isBalanceTree2(node.rChild, rightDepth)) {
+            System.out.println(node.data + ", " + leftDepth[0] + ", " + rightDepth[0] + ", " + depth[0]);
+
+            if (Math.abs(leftDepth[0] - rightDepth[0]) <= 1) {
+                depth[0] = 1 + Math.max(leftDepth[0], rightDepth[0]);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /*
