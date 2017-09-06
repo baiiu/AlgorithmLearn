@@ -12,7 +12,7 @@ import com.baiiu.BiNode;
  * ------------H
  * ----------I
  */
-class Question39_ {
+class Question39_BalancedBinaryTree {
 
     /**
      * 输入一棵二叉树的根节点，判断该树是不是平衡二叉树。

@@ -91,8 +91,8 @@ public class ZTestQuestion {
 //        Question37_FirstCommonNodeInLists.test();
 //        Question38_NumberOfK.test();
 //        Question39_TreeDepth.test();
-        Question39_.test();
-
+//        Question39_BalancedBinaryTree.test();
+        Question40_.test();
 
     }
 

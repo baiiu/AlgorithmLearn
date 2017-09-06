@@ -16,11 +16,11 @@ public class CommonUtil {
     }
 
     public static boolean isEmpty(int[] array) {
-        return array == null || array.length == 0 || array.length == 1;
+        return array == null || array.length == 0;
     }
 
     public static boolean isEmpty(Object[] array) {
-        return array == null || array.length == 0 || array.length == 1;
+        return array == null || array.length == 0;
     }
 
     public static boolean isEmpty(Collection collection) {
