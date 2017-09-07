@@ -94,7 +94,10 @@ public class ZTestQuestion {
 //        Question39_BalancedBinaryTree.test();
 //        Question40_NumbersAppearOnce.test();
 //        Question41_TwoNumbersWithSum.test();
-        Question41_ContinuesSequenceWithSum.test();
+//        Question41_ContinuesSequenceWithSum.test();
+//        Question42_ReverseWordsInSentence.test();
+        Question42_LeftRotateString.test();
+
     }
 
 }
