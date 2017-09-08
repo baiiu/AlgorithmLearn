@@ -96,7 +96,14 @@ public class ZTestQuestion {
 //        Question41_TwoNumbersWithSum.test();
 //        Question41_ContinuesSequenceWithSum.test();
 //        Question42_ReverseWordsInSentence.test();
-        Question42_LeftRotateString.test();
+//        Question42_LeftRotateString.test();
+
+        /*
+            抽象建模能力
+                第一步：选择合理的数据结构来表述问题
+                第二步：分析模型中的内在规律
+         */
+        Question43_.test();
 
     }
 
