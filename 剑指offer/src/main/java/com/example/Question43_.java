@@ -16,13 +16,19 @@ class Question43_ {
      * 输入n，打印出s的所有可能的值出现的概率。
      */
     static void test() {
-        int n = 3;
+        int n = 4;
 
         int[] arr = new int[n * 6 + 1];
-        count(n, arr);
+        int[] arr2 = new int[n * 6 + 1];
+        boolean isArrSource = count(n, arr, arr2);
+        if (isArrSource) {
+            printSum(arr, n);
+        } else {
+            printSum(arr2, n);
+        }
 
+        System.out.println();
 
-//        printSum(arr, n);
         printProbability(n);
     }
 
@@ -54,7 +60,7 @@ class Question43_ {
 
         int total = (int) Math.pow(g_maxValue, number);
         for (int i = number; i <= g_maxValue * number; i++) {
-            System.out.println("点数: " + i + "\t,出现次数: " + probabilities[flag][i] + "\t, 概率: " + probabilities[flag][i] + "/" + total);
+            System.out.println("和: " + i + "\t,出现次数: " + probabilities[flag][i] + "\t, 概率: " + probabilities[flag][i] + "/" + total);
         }
     }
 
@@ -69,14 +75,21 @@ class Question43_ {
             key记录的和
             value记录的出现次数
      */
-    private static void count(int n, int[] arr) {
+    private static boolean count(int n, int[] arr, int[] arr2) {
 
         // 每一次递归，都会进行一个加1
+
+        boolean isArrSource = true;
 
         while (n > 0) {
             --n;
 
-            if (isNull(arr)) {
+            int[] sourceArr = isArrSource ? arr : arr2;
+            int[] resultArr = isArrSource ? arr2 : arr;
+
+            if (isNull(sourceArr)) {
+                isArrSource = true;
+
                 for (int i = 1; i < 7; ++i) {
                     //1个骰子，初始情况
                     arr[i] = 1;
@@ -84,25 +97,28 @@ class Question43_ {
             } else {
 
                 // 遍历上次的所有和，对所有和 + 相应的骰子数
-                int originLength = countLength(arr);
+                int originLength = countLength(sourceArr);
 
                 for (int i = 1; i < originLength; ++i) {
-                    if (arr[i] == 0) continue;
+                    if (sourceArr[i] == 0) continue;
 
-                    for (int j = 1; j < 7; ++j) {
-                        int key = i + j;
-                        ++arr[key];
+                    for (int k = 0; k < sourceArr[i]; ++k) {
+                        for (int j = 1; j < 7; ++j) {
+                            int key = i + j;
+                            ++resultArr[key];
+                        }
                     }
                 }
 
-                //其中对arr[1,length)多加了一个原本的1，需要减去
-                for (int i = 1; i < originLength; ++i) {
-                    if (arr[i] == 0) continue;
-
-                    --arr[i];
+                for (int i = 0; i < originLength; ++i) {
+                    sourceArr[i] = 0;
                 }
+
+                isArrSource = !isArrSource;
             }
         }
+
+        return isArrSource;
     }
 
     private static boolean isNull(int[] arr) {
@@ -135,7 +151,7 @@ class Question43_ {
         int sum = (int) Math.pow(6, n);
 
         for (int i = 1, length = arr.length; i < length; i++) {
-            System.out.println("点数: " + i + "\t,出现次数: " + arr[i] + "\t, 概率: " + arr[i] + "/" + sum);
+            System.out.println("和: " + i + "\t,出现次数: " + arr[i] + "\t, 概率: " + arr[i] + "/" + sum);
         }
 
     }
