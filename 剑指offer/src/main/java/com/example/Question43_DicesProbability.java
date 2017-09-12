@@ -7,7 +7,7 @@ import com.baiiu.CommonUtil;
  * time: 17/9/7 07 23:13
  * description:
  */
-class Question43_ {
+class Question43_DicesProbability {
 
     /**
      * n个骰子的点数

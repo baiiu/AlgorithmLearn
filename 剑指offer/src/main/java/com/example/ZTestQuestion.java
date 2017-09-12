@@ -103,7 +103,8 @@ public class ZTestQuestion {
                 第一步：选择合理的数据结构来表述问题
                 第二步：分析模型中的内在规律
          */
-        Question43_.test();
+//        Question43_DicesProbability.test();
+        Question44_.test();
 
     }
 
