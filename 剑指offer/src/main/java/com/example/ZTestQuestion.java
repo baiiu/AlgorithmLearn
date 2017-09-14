@@ -104,8 +104,8 @@ public class ZTestQuestion {
                 第二步：分析模型中的内在规律
          */
 //        Question43_DicesProbability.test();
-        Question44_.test();
-
+//        Question44_ContinuousCards.test();
+        Question45_.test();
     }
 
 }
