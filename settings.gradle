@@ -1,4 +1,4 @@
-include ':剑指offer', ':test', ':HihoCoder'
+include ':剑指offer'
 include ':leetCode'
 include ':algorithm'
 include ':libraryCommon'
