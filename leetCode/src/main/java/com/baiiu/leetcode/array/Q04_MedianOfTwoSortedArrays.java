@@ -17,12 +17,14 @@ public class Q04_MedianOfTwoSortedArrays {
      */
     public static void main(String[] args) {
         int[] arr1 = new int[] { 1, 2 };
-        int[] arr2 = new int[] { 3, 4 };
+        int[] arr2 = new int[] { 3, 4, 5, 6 };
 
         System.out.println(findMedian(arr1, arr2));
+        System.out.println(findMedianOnce(arr1, arr2));
     }
 
 
+    // O(n)空间+O(n)时间
     private static float findMedian(int[] arr1, int[] arr2) {
         if (arr1 == null || arr2 == null) {
             return -1;
@@ -52,9 +54,9 @@ public class Q04_MedianOfTwoSortedArrays {
             ++k;
         }
 
-        int mid = arr.length / 2;
+        int mid = (arr.length - 1) / 2;
         if (arr.length % 2 == 0) {
-            return (arr[mid] + arr[mid - 1]) / 2f;
+            return (arr[mid] + arr[mid + 1]) / 2f;
         } else {
             return arr[mid];
         }
@@ -76,8 +78,9 @@ public class Q04_MedianOfTwoSortedArrays {
 
         中位数
 
+        四个指针，从两端开始分别前进，前进 < k/2步
      */
-    private static int findMedianBinary(int[] arr1, int[] arr2) {
+    private static float findMedianOnce(int[] arr1, int[] arr2) {
         if (arr1 == null || arr2 == null) {
             return -1;
         }
@@ -85,11 +88,29 @@ public class Q04_MedianOfTwoSortedArrays {
         int arr1Start = 0, arr2Start = 0;
         int arr1End = arr1.length - 1, arr2End = arr2.length - 1;
 
+        int k = (arr1.length + arr2.length - 1) / 2;
 
-        int min = Math.min(arr1[arr1Start], arr2[arr2Start]);
-        int max = Math.max(arr1[arr1End], arr2[arr2End]);
 
-        return 0;
+        for (int i = 0; i < k; ++i) {
+            if (arr1[arr1Start] < arr2[arr2Start]) {
+                ++arr1Start;
+            } else {
+                ++arr2Start;
+            }
+
+            if (arr1[arr1End] > arr2[arr2End]) {
+                --arr1End;
+            } else {
+                --arr2End;
+            }
+        }
+
+
+        int x = Math.max(arr1[arr1Start], arr2[arr2Start]);
+        int y = Math.min(arr1[arr1End], arr2[arr2End]);
+
+
+        return (x + y) / 2f;
     }
 
 }
